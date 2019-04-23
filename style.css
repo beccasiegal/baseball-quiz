@@ -30,7 +30,7 @@ header {
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
- max-height: 100vh;
+ min-height: 100vh;
 }
 img {
   display: block;
