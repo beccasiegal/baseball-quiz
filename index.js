@@ -5,29 +5,24 @@ function generateQuestion () {
   if (questionNumber < STORE.length) {
     return `<div class="question-${questionNumber}">
     <h2>${STORE[questionNumber].question}</h2>
-    <br>
     <form>
     <fieldset>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
     <span>${STORE[questionNumber].answers[0]}</span>
     </label>
-    <br>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
     <span>${STORE[questionNumber].answers[1]}</span>
     </label>
-    <br>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[2]}" name="answer" required>
     <span>${STORE[questionNumber].answers[2]}</span>
     </label>
-    <br>
     <label class="answerOption">
     <input type="radio" value="${STORE[questionNumber].answers[3]}" name="answer" required>
     <span>${STORE[questionNumber].answers[3]}</span>
     </label>
-    <br><br>
     <button type="submit" class="submitButton">Submit</button>
     </fieldset>
     </form>
@@ -58,7 +53,7 @@ function changeScore () {
 function startQuiz () {
   $('.quizStart').on('click', '.startButton', function (event) {
     $('.quizStart').remove();
-    $('.img').remove();
+    $('.firstImage').remove();
     renderQuestion();
     $('.questionAnswerForm').css('display', 'block');
     $('.questionNumber').text(1);
@@ -100,14 +95,14 @@ function ifAnswerIsWrong () {
 //user feedback for correct answer
 function userAnswerFeedbackCorrect () {
   let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
-  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><img src="https://www.respectablereviews.com/wp-content/uploads/2016/04/best-youth-baseball-glove-1024x469.jpg" alt="baseball and glove"/></div><p><b>You got it right!</b></p><br><button type=button class="nextButton">Next</button></div>`);
+  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><img src="https://www.respectablereviews.com/wp-content/uploads/2016/04/best-youth-baseball-glove-1024x469.jpg" alt="baseball and glove"/></div><p><strong>You got it right!</strong></p><button type=button class="nextButton">Next</button></div>`);
 }
 
 //user feedback for wrong answer
 function userAnswerFeedbackWrong () {
   let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
   // let iconImage = `${STORE[questionNumber].icon}`;
-  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><img src="http://www.stillyvalleylittleleague.com/imagedata/Umpirethirdstrike_crop_north.jpg" alt="umpire calling you out"/></div><p><b>You got it wrong</b><br>the correct answer is <span>"${correctAnswer}"</span></p><br><button type=button class="nextButton">Next</button></div>`);
+  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><img src="http://www.stillyvalleylittleleague.com/imagedata/Umpirethirdstrike_crop_north.jpg" alt="umpire calling you out"/></div><p><strong>You got it wrong</strong><br>the correct answer is <span>"${correctAnswer}"</span></p><button type=button class="nextButton">Next</button></div>`);
 }
 
 //update score text
