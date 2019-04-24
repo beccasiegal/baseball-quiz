@@ -30,7 +30,7 @@ header {
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
- min-height: 100vh;
+  min-height: 100vh;
 }
 img {
   display: block;
@@ -38,5 +38,6 @@ img {
   margin-right: auto;
   width: 50%;
 }
-.button{
-    padding: 10px;
+button {
+  padding: 10px;
+}
