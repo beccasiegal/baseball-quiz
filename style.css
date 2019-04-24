@@ -41,3 +41,26 @@ img {
 button {
   padding: 10px;
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 2px;
+}
+h2{
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+label{
+  display: block;
+  margin: 10px 0;
+}
+
+.questionAnswerForm p{
+  margin: 10px 0;
+}
+strong{
+  font-weight: bold;
+}
